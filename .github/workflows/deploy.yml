@@ -25,6 +25,14 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Bump version
+        run: npm version patch
+          git config --global user.email "rukrak86@gmail.com"
+          git config --global user.name "Ruslan Korkin"
+          git add package.json
+          git commit -m "Bump version to $(jq -r .version < package.json)"
+          git push
+
       - name: Publish package
         run: npm publish
         env:
