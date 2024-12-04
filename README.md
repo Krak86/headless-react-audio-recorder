@@ -33,10 +33,10 @@ Inspired of the idea of [Shadcn](https://ui.shadcn.com/), [headlessui](https://h
 
 ## Usage
 
-Use single **useAudioRecorder** hook for all actions:
+Use single **useRecorder** hook for all actions:
 
 ```js
-import { useAudioRecorder } from "headless-react-audio-recorder";
+import { useRecorder } from "headless-react-audio-recorder";
 
 function App() {
   // use single hook for all actions
@@ -58,7 +58,7 @@ function App() {
     playerRef,
     isPlayingPlayer,
     onPlayPausePlayer,
-  } = useAudioRecorder({
+  } = useRecorder({
     onRecordingComplete: (blob: Blob) => {
       console.log("recording complete", blob);
     },
