@@ -2,7 +2,7 @@
   "name": "headless-react-audio-recorder",
   "private": false,
   "version": "1.0.0",
-  "description": "Headless React Audio Recorder and Player (Headless Recorder)",
+  "description": "Headless React Audio Recorder and Player a.k.a. Headless Audio Recorder a.k.a. HAR",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
