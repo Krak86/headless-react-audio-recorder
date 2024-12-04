@@ -1,5 +1,3 @@
-import WaveSurfer, { WaveSurferOptions } from "wavesurfer.js";
-
 export type RecorderControls = {
   startRecording: () => void;
   stopRecording: () => void;

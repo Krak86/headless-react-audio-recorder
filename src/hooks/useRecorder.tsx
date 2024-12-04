@@ -101,7 +101,9 @@ const useAudioRecorder = (
   const [recordingTime, setRecordingTime] = useState(0);
   const [lastRecordingTime, setLastRecordingTime] = useState(0);
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder>();
-  const [timerInterval, setTimerInterval] = useState<number>();
+  const [timerInterval, setTimerInterval] = useState<
+    NodeJS.Timeout | undefined
+  >();
   const [recordingBlob, setRecordingBlob] = useState<Blob>();
   const [downloadingBlob, setDownloadingBlob] = useState<boolean>();
   const [audio, setAudio] = useState<string | null>(null);

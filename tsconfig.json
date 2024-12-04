@@ -29,5 +29,8 @@
     "paths": {
       "@/*": ["src/*"]
     }
-  }
+  },
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "include": ["src/**/*", "types/**/*"],
+  "exclude": ["node_modules", "dist"]
 }

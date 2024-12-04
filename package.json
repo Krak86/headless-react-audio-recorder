@@ -1,19 +1,22 @@
 {
   "name": "headless-react-audio-recorder",
+  "private": false,
   "version": "1.0.0",
   "description": "Headless React Audio Recorder and Player (Headless Recorder)",
-  "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Krak86/headless-react-audio-recorder.git"
+  },
   "author": "Ruslan Korkin",
   "license": "MIT",
   "devDependencies": {
     "@ffmpeg/ffmpeg": "^0.11.6",
-    "react-audio-visualize": "^1.1.3",
-    "@wavesurfer/react": "^1.0.7",
+    "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "eslint": "^9.15.0",
@@ -21,8 +24,52 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "react": "18.3.1",
+    "react-audio-visualize": "^1.1.3",
     "react-dom": "18.3.1",
     "typescript": "^5.6.3",
-    "vite": "^5.4.11"
+    "vite": "^5.4.11",
+    "vite-plugin-dts": "^4.3.0"
+  },
+  "dependencies": {
+    "@wavesurfer/react": "^1.0.7"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/headless-react-audio-recorder.umd.cjs",
+  "module": "./dist/headless-react-audio-recorder.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/headless-react-audio-recorder.es.js"
+    }
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "nextjs",
+    "audio",
+    "voice",
+    "audio recording",
+    "audio recorder",
+    "voice recording",
+    "voice recorder",
+    "recorder",
+    "recording",
+    "getUserMedia",
+    "mediaDevices",
+    "ffmpeg",
+    "download audio",
+    "download",
+    "mp3",
+    "webm",
+    "wav",
+    "mpeg"
+  ],
+  "peerDependencies": {
+    "react": ">=16.2.0",
+    "react-dom": ">=16.2.0"
   }
 }
