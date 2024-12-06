@@ -10,7 +10,7 @@ export const convertToDownloadFileExtension = async (
   webmBlob: Blob,
   downloadFileExtension: DownloadFileExtension
 ): Promise<Blob> => {
-  const FFmpeg = await import("@ffmpeg/ffmpeg");
+  const FFmpeg = await import("@ffmpeg/ffmpeg/dist/ffmpeg.min.js");
   const ffmpeg = FFmpeg.createFFmpeg({ log: false });
   await ffmpeg.load();
 
